@@ -25,6 +25,7 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           {post.frontmatter.title}
+          {post.frontmatter.tags}
         </h1>
         <p
           style={{
