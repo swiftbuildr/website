@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: Setting up Universal Links and Site Association
+title: 🔧 Setting up Universal Links and Site Association
 description: How do you setup Universal Links for iOS?
 date: "2019-07-05 05:30"
 ---

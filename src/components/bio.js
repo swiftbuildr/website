@@ -55,11 +55,14 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in London building all things iOS.
+        Written by <strong>{author}</strong> who lives and works in London
+        building all things iOS.
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
           You should follow him on Twitter
-        </a> or contact him on <a href={`https://www.linkedin.com/in/${social.linkedin}`}>LinkedIn</a>
+        </a>{" "}
+        or contact him on{" "}
+        <a href={`https://www.linkedin.com/in/${social.linkedin}`}>LinkedIn</a>
       </p>
     </div>
   )

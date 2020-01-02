@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: FizzBuzz in Swift
+title: 🤓 FizzBuzz in Swift
 date: "2017-03-02 05:30"
 
 ---
