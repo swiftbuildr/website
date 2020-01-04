@@ -8,6 +8,20 @@ module.exports = {
       twitter: `SMLWRD`,
       linkedin: `smlwrd`
     },
+    menuLinks: [
+      {
+        name: "home",
+        link: "/"
+      },
+      {
+        name: "blog",
+        link: "/blog"
+      },
+      {
+        name: "services",
+        link: "/services"
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-sitemap`,

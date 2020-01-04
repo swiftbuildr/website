@@ -2,11 +2,13 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Navigation from "../components/navigation"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Clients from "../components/clients"
 import { rhythm } from "../utils/typography"
 
-class BlogIndex extends React.Component {
+class Index extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -14,8 +16,9 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title="Homepage" />
         <Bio />
+        <h3 style={{marginBottom: 0}}>Articles</h3>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -29,7 +32,12 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small style={{ 
+                padding: rhythm(0.1),
+                marginRight: rhythm(0.1)
+              }}>
+                {node.frontmatter.date}
+              </small>
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
@@ -43,7 +51,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default Index
 
 export const pageQuery = graphql`
   query {
@@ -63,6 +71,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }
