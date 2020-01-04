@@ -78,15 +78,4 @@ class Layout extends React.Component {
   }
 }
 
-export const pageQuery = graphql`
-query TitleQuery {
-  site {
-    siteMetadata {
-      title
-    }
-  }
-}
-`
-
-
 export default Layout
